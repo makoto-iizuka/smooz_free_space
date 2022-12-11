@@ -2,15 +2,25 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Favorite;
+use App\Http\Controllers\GoogleLoginController;
+use App\Http\Controllers\MypageController;
+
+use Laravel\Socialite\Facades\Socialite;
 use Laravel\Sanctum\HasApiTokens;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+use Illuminate\Notifications\Notifiable;
+
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        "google_id",
     ];
 
     /**
@@ -41,4 +52,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    /**
+     * Favoriteに対するリレーション「1対多」の関係
+     *
+     */
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
 }
