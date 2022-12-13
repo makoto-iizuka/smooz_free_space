@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('railroads', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->constrained(); 
+            $table->foreignId('company_id')->constrained();
             $table->string('railroad_name', 50);
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lines');
+        Schema::dropIfExists('railroads');
     }
 };

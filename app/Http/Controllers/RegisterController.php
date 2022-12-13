@@ -56,16 +56,16 @@ class RegisterController extends Controller
             'regex' => ':attributeに「/」と半角スペースは使用できません。',
         ];
 
-        return Validator::make($data, [
+        return Validator::make(
+            $data,
+            [
             'name' => ['required', 'regex:/^(?!.*\s).+$/u', 'regex:/^(?!.*\/).*$/', 'max:15', 'unique:users'],
-            //'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            //'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,NULL,id,deleted_at,NULL'],
-            
-            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users', 'email')->whereNull('deleted_at'),],
+            'email' => ['required', 'string', 'email', 'max:255',
+                        Rule::unique('users', 'email')->whereNull('deleted_at'),],
             'password' => ['required', 'string', new CustomPasswordValidation, 'confirmed'],
-        ],
-        $messages
-    );
+            ],
+            $messages
+            );
     }
 
     public function showProviderUserRegistrationForm(Request $request, string $provider)
@@ -85,7 +85,6 @@ class RegisterController extends Controller
             ];
             
             return view('auth.social_register', $data);
-            
         }
     }
 

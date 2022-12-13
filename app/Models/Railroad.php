@@ -56,30 +56,4 @@ class Railroad extends Model
     {
         return $this->hasMany(View::class);
     }
-    
-    /**
-     * 会社IDに紐づいた投稿リストを全て取得する
-     * 
-     * @param int $company_id 会社ID
-     * @return View
-     *
-    public function getRailroadsByCompanyId()
-    {
-        $result = $this->where('company_id', $company_id)->get();
-        return $result;
-    }
-    */
-    
-    /**
-     * 会社IDに紐づいた投稿リストを全て取得する
-     * 
-     * @param int $company_id 会社ID
-     * @return View
-     *
-    public function getRailroadsByCompanyId($conpany_id)
-    {
-        $result = $this->where('company_id', $company_id)->with('companies')->get();
-        return $result;
-    }
-    */
 }
