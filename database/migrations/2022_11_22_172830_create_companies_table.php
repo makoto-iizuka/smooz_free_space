@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('prefecture_id')->constrained(); 
+            $table->foreignId('prefecture_id')->constrained();
             $table->string('company_name', 50);
             $table->timestamps();
         });

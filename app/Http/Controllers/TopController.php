@@ -11,26 +11,25 @@ class TopController extends Controller
      * @return View トップ画面
      */
     public function top()
-        {
-            return view('top');
-        }
+    {
+        return view('top');
+    }
 
     /**
      * 利用規約画面表示
      * @return View 利用規約画面
      */
     public function teams()
-        {
-            return view('/common/teams');
-        }
+    {
+        return view('/common/teams');
+    }
 
     /**
      * プライバシーポリシー画面表示
      * @return View プライバシーポリシー画面
      */
     public function privacy()
-        {
-            return view('/common/privacy');
-        }
-
+    {
+        return view('/common/privacy');
+    }
 }

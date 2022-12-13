@@ -14,25 +14,25 @@ class Favorite extends Model
     
     /**
      * モデルに関連付けるテーブル
-     *
+     * 
      * @var string
      */
     protected $table = 'favorites';
     
     /**
      * 複数代入可能な属性
-     *
+     * 
      * @var array
      */
     protected $fillable=[
         'user_id',
-        'favorite_id',
+        'view_id',
         ];
     
     
     /**
      * Userに対するリレーション「多対1」の関係
-     *
+     * 
      */
     public function user()
     {
@@ -41,7 +41,7 @@ class Favorite extends Model
     
     /**
      * Viewに対するリレーション「多対1」の関係
-     *
+     * 
      */
     public function view()
     {

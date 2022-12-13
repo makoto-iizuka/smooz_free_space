@@ -36,14 +36,14 @@
                 @if(!is_null($favorite))
                 {{-- 「いいね」取消用ボタンを表示 --}}
                 <button class="bg-red-600 hover:bg-red-500 text-white rounded px-3 py-2">
-                    <a href="{{ route('un_favo',$view) }}">
+                    <a href="{{ route('un_favo', $view) }}">
                         お気に入り解除
                     </a>
                 </button>
                 @else
                 {{-- まだユーザーが「いいね」をしていなければ、「いいね」ボタンを表示 --}}
                 <button class="bg-green-600 hover:bg-green-500 text-white rounded px-3 py-2">
-                    <a href="{{ route('favo',$view) }}">
+                    <a href="{{ route('favo', $view) }}">
                         お気に入り登録
                     </a>
                 </button>

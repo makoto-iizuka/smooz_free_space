@@ -11,7 +11,22 @@ use App\Logging\SampleProcessor;
 
 class SampleTap
 {
-    const FORMAT = "[%datetime%] %level_name% %channel% %message% %extra.file% %extra.line% %extra.class% %extra.function% %extra.hostname% %extra.url% %extra.ip% %extra.http_method% %extra.server% %extra.referrer% %extra.custom% %context.memo%\n";
+    const FORMAT = "[%datetime%]
+                    %level_name%
+                    %channel%
+                    %message%
+                    %extra.file%
+                    %extra.line%
+                    %extra.class%
+                    %extra.function%
+                    %extra.hostname%
+                    %extra.url%
+                    %extra.ip%
+                    %extra.http_method%
+                    %extra.server%
+                    %extra.referrer%
+                    %extra.custom%
+                    %context.memo%\n";
 
     public function __invoke($logger)
     {

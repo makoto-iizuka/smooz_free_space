@@ -83,11 +83,11 @@ Route::controller(MypageController::class)->middleware(['auth'])->group(function
   /**
    * 退会前ユーザ情報確認画面表示
    */
-  Route::get('/mypage/destroy/check', 'destroy_confirmation')->name('check');
+  Route::get('/mypage/destroy/check', 'destroyConfirmation')->name('check');
   /**
    * ユーザ退会確認画面表示
    */
-  Route::post('/mypage/destroy/{user}', 'destroy_user');
+  Route::post('/mypage/destroy/{user}', 'destroyUser');
   /**
    * ユーザ退会処理
    */
@@ -139,7 +139,3 @@ Route::post('/show', [SearchController::class, 'search'])->name('search');
 Route::get('/reply/favo/{view}', [FavoriteController::class, 'favo'])->name('favo');
 Route::get('/reply/unfavo{view}', [FavoriteController::class, 'unfavo'])->name('un_favo');
 
-/**
- * ログ
- */
-Route::get('sample/log', 'GoogleLoginController@log');

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('stations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('railroad_id')->constrained(); 
+            $table->foreignId('railroad_id')->constrained();
             $table->string('station_name', 50);
             $table->timestamps();
         });
