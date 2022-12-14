@@ -1,66 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# アプリ名：Smoozフリースペース
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## 概要
+東京都の電車の車椅子ベビーカー用スペース(以下、「フリースペース」といいます。)の設置位置及びホームのエレベーター設置位置を検索できるアプリです。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## このアプリを作成した理由
+日常生活で、電車を利用する際にフリースペースがどこに設置されているのか、エレベーターからどれほど離れた位置にあるのかがわからず困ることがありました。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+フリースペースの設置位置に関しては、すでに各鉄道会社が提供するサービスはあるのですが(スムーズメトロ、西武線アプリ等)、JRでは同様のサービスが無いため電車の乗車や乗り換えに時間かかることが多々あります。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+そんな悩みを解決したいと思いこのアプリを作成しました。
 
-## Learning Laravel
+## 工夫した点
+- 顧客である家族や友人へ実際にヒアリングを行い、フィードバックをもらいながら要望に合わせて機能を実装。
+- ユーザーが操作に困ることなく使いやすいUIになるようシンプルなデザインを実装。
+- スマホ一つで利用できるようにレスポンシブ対応。
+- PSR2のコーディング規約に沿ったソースコードで実装。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 機能一覧（全11機能）
+- ユーザー関連
+   - アカウント作成、編集、退会
+   - ログイン、ログアウト
+   - ソーシャルログイン、ログアウト(Google)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 閲覧関連
+   - キーワードで曖昧検索
+   - 一覧表示(会社名-路線名-駅名)
+   - お気に入り登録、お気に入り削除
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## ER図
+<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/ER%E5%9B%B3.drawio+(1).png">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## インフラ構成図
+<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E6%88%90%E5%9B%B3.png">
 
-### Premium Partners
+## 環境
+フロントエンド：HTML5、CSS、Tailwindcss@3.2.4 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+バックエンド：PHP8.0.23、Laravel9.36.2
 
-## Contributing
+インフラ：AWS Cloud9 S3、nginx1.18、MySQL8.0.23
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+認証：Laravel Breeze、Socialite
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

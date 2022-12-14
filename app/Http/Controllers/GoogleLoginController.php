@@ -26,19 +26,7 @@ class GoogleLoginController extends Controller
             'google_id' => $googleUser->getId()
         ]);
         Auth::login($user, true);
+        
         return redirect('/');
-    }
-    public function log(Request $request)
-    {
-        Log::emergency('ログサンプル', ['memo' => 'sample1']);
-        Log::alert('ログサンプル', ['memo' => 'sample1']);
-        Log::critical('ログサンプル', ['memo' => 'sample1']);
-        Log::error('ログサンプル', ['memo' => 'sample1']);
-        Log::warning('ログサンプル', ['memo' => 'sample1']);
-        Log::notice('ログサンプル', ['memo' => 'sample1']);
-        Log::info('ログサンプル', ['memo' => 'sample1']);
-        Log::debug('ログサンプル', ['memo' => 'sample1']);
-
-        return view('sample.log');
     }
 }

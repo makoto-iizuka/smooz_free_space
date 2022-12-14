@@ -42,7 +42,7 @@ class MypageController extends Controller
      * @param User $user
      * @return View ユーザ情報確認画面
      */
-    public function confirmation(Request $request,User $user)
+    public function confirmation(User $user)
     {
         return view('/mypage/confirmation')->with([
             'user' => $user
@@ -51,10 +51,10 @@ class MypageController extends Controller
     
     /**
      * プロフィール編集画面表示
-     * @param User $user
+     * @param Request $request, User $user
      * @return View プロフィール編集画面
      */
-    public function edit(Request $request,User $user)
+    public function edit(Request $request, User $user)
     {
         $password = $request['password'];
         $confirm_pass = $request['password_confirmation'];
@@ -97,9 +97,9 @@ class MypageController extends Controller
             return redirect('/');
         } else {
             return redirect('/mypage')->with(
-                'message', 
+                'message',
                 'パスワードが一致しませんでした。大変お手数ですが最初からもう一度やり直してください'
-                );
+            );
         }
     }
     
@@ -108,7 +108,7 @@ class MypageController extends Controller
      * @param User $user
      * @return View 退会前ユーザ情報確認画面表示
      */
-    public function destroy_confirmation(User $user)
+    public function destroyConfirmation(User $user)
     {
         return view('/mypage/destroy_confirmation')->with([
             'user' => $user
@@ -117,10 +117,10 @@ class MypageController extends Controller
     
     /**
      * ユーザ退会確認画面表示
-     * @param user $user
+     * @param Request $request, User $user
      * @return View ユーザ退会確認画面
      */
-    public function destroy_user(Request $request, User $user)
+    public function destroyUser(Request $request, User $user)
     {
         $password = $request['password'];
         $confirm_pass = $request['password_confirmation'];
@@ -152,20 +152,18 @@ class MypageController extends Controller
     
     /**
      * お気に入り画面表示
-     * @param User $user
      * @return View お気に入り画面
      */
     public function favorite()
-        {
-            $id = Auth::id();
-            $favorite = Favorite::where('user_id', $id)->get();
-            $lists = Favorite::with('view','view.station','view.station.railroad')
-                                ->where('user_id', $id)->get();
-            
-            return view('/search/favorite')->with([
-                
-                'favorite'=>$favorite,
-                'lists'=>$lists
-                ]);
-        }
+    {
+        $id = Auth::id();
+        $favorite = Favorite::where('user_id', $id)->get();
+        $lists = Favorite::with('view', 'view.station', 'view.station.railroad')
+                            ->where('user_id', $id)->get();
+        
+        return view('/search/favorite')->with([
+            'favorite'=>$favorite,
+            'lists'=>$lists
+            ]);
+    }
 }
