@@ -135,7 +135,9 @@ Route::get('/lists/{railroad_id}/{station_id}', [SearchController::class, 'detai
 Route::get('/show', [SearchController::class, 'search'])->name('search');
 Route::post('/show', [SearchController::class, 'search'])->name('search');
 
-
+/**
+ * お気に入り処理
+ */
 Route::get('/reply/favo/{view}', [FavoriteController::class, 'favo'])->name('favo');
 Route::get('/reply/unfavo{view}', [FavoriteController::class, 'unfavo'])->name('un_favo');
 

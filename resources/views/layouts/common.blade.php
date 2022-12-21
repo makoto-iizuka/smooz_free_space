@@ -18,11 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
     {{-- Styles --}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    {{-- Scripts --}}
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
 </head>
 <body>
     <div>

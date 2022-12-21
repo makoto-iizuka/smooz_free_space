@@ -40,7 +40,7 @@
 
 バックエンド：PHP8.0.23、Laravel9.36.2
 
-インフラ：AWS Cloud9 S3、nginx1.18、MySQL8.0.23
+インフラ：AWS Cloud9、S3、Route 53、Certificate Manager、Erastic Beanstalk、nginx1.18、MySQL8.0.23
 
-認証：Laravel Breeze、Socialite
+認証：Laravel Breeze、Socialite、GCP
 
