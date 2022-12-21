@@ -30,10 +30,10 @@
 
 
 ## ER図
-<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/ER%E5%9B%B3.drawio+(1).png">
+![ER図](https://user-images.githubusercontent.com/111279083/208892667-407c944f-fe06-4fa2-8122-8674d6087104.png)
 
 ## インフラ構成図
-<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E6%88%90%E5%9B%B3.png">
+![インフラ構成図](https://user-images.githubusercontent.com/111279083/208892352-3fa9ae22-78e7-4657-8aff-a7f2c957d141.png)
 
 ## 環境
 フロントエンド：HTML5、CSS、Tailwindcss@3.2.4 
