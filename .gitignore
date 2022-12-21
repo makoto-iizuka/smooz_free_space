@@ -15,6 +15,10 @@ yarn-error.log
 /.idea
 /.vscode
 
+
+
+
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

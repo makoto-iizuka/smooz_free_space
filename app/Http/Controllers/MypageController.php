@@ -110,9 +110,17 @@ class MypageController extends Controller
      */
     public function destroyConfirmation(User $user)
     {
-        return view('/mypage/destroy_confirmation')->with([
-            'user' => $user
-            ]);
+        $gid = Auth::user()->google_id;
+        
+        if (!$gid) {
+            return view('/mypage/destroy_confirmation')->with([
+                'user' => $user
+                ]);
+        } else {
+            return view('/mypage/destroy')->with([
+                'user' => $user
+                ]);
+        }
     }
     
     /**

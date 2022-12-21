@@ -61,11 +61,9 @@ class SearchController extends Controller
     {
         $station_name = Station::find($station_id);
         $details = Station::find($station_id)->views()->get();
-        //dd($details);
         //お気に入りボタン用
         foreach ($details as $detail) {
                     $view = $detail->id;
-                    //dd($view);
         }
         if (Auth::check()) {
             $favorite = Favorite::where('view_id', $view)
