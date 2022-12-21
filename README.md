@@ -30,10 +30,10 @@
 
 
 ## ER図
-<img width="905" src="https://imgbucket-202211152400.s3.amazonaws.com/README/ER%E5%9B%B3.drawio+(1).png">
+<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/ER%E5%9B%B3.drawio+(1).png">
 
 ## インフラ構成図
-<img width="905" src="https://imgbucket-202211152400.s3.amazonaws.com/README/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E6%88%90%E5%9B%B3.png">
+<img width="905" alt="" src="https://imgbucket-202211152400.s3.amazonaws.com/README/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E6%88%90%E5%9B%B3.png">
 
 ## 環境
 フロントエンド：HTML5、CSS、Tailwindcss@3.2.4 
