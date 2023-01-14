@@ -12,6 +12,7 @@ use App\Models\Station;
 use App\Models\View;
 use App\Models\User;
 use App\Models\Favorite;
+use Illuminate\Support\Facades\Cookie;
 
 class SearchController extends Controller
 {
@@ -21,7 +22,10 @@ class SearchController extends Controller
      */
     public function history()
     {
-        return view('/search/history');
+        $visited_stations = json_decode(Cookie::get('visited_stations', '[]'), true);
+        return view('/search/history')->with([
+            'visited_stations' => $visited_stations
+            ]);
     }
 
     /**
@@ -61,6 +65,19 @@ class SearchController extends Controller
     {
         $station_name = Station::find($station_id);
         $details = Station::find($station_id)->views()->get();
+        $railroad_name = Railroad::find($railroad_id);
+        
+        // cookieに保存する履歴情報を作成
+        $history = [
+            'railroad_name' => $railroad_name,
+            'station_name' => $station_name,
+        ];
+
+        // cookieに履歴情報を保存
+        $visited_stations = json_decode(Cookie::get('visited_stations', '[]'), true);
+        array_unshift($visited_stations, $history);
+        Cookie::queue('visited_stations', json_encode($visited_stations), 60);
+    
         //お気に入りボタン用
         foreach ($details as $detail) {
                     $view = $detail->id;
@@ -75,6 +92,7 @@ class SearchController extends Controller
         
         return view('/search/detail')->with([
             'station_name' => $station_name,
+            'railroad_name' => $railroad_name,
             'details' => $details,
             'favorite' => $favorite,
             'view' => $view
