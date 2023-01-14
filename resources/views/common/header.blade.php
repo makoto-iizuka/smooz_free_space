@@ -16,6 +16,10 @@
                class="mr-5 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
                 {{ __('お気に入り') }}
             </a>
+            <a href="{{ route('history') }}"
+               class="mr-5 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                {{ __('閲覧履歴') }}
+            </a>
         </nav>
         
         <button class="
@@ -66,6 +70,10 @@
             <a href="{{ route('lists') }}"
                class="mr-5 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
                 {{ __('路線一覧') }}
+            </a>
+            <a href="{{ route('history') }}"
+               class="mr-5 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                {{ __('閲覧履歴') }}
             </a>
         </nav>
         
