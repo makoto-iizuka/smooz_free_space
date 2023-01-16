@@ -49,6 +49,24 @@
                 </button>
                 @endif
             </span>
+            {{-- LINEシェアボタン --}}
+            <div class="line-it-button"
+                 data-lang="ja"
+                 data-type="share-a"
+                 data-env="REAL"
+                 data-url="{{ request()->fullUrl() }}"
+                 data-color="default"
+                 data-size="large"
+                 data-count="false"
+                 data-ver="3"
+                 style="display: none;"
+                >
+            </div>
+            <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+                    async="async"
+                    defer="defer"
+                    >
+            </script>
         </div>
         
         {{-- 画像表示 --}}
@@ -103,6 +121,24 @@
                        ">
                         {{ $station_name->station_name }}{{ __('駅') }}
             </h1>
+            {{-- LINEシェアボタン --}}
+            <div class="line-it-button"
+                 data-lang="ja"
+                 data-type="share-a"
+                 data-env="REAL"
+                 data-url="{{ request()->fullUrl() }}"
+                 data-color="default"
+                 data-size="large"
+                 data-count="false"
+                 data-ver="3"
+                 style="display: none;"
+                >
+            </div>
+            <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+                    async="async"
+                    defer="defer"
+                    >
+            </script>
         </div>
         {{-- 画像表示 --}}
         @foreach($details as $detail)
