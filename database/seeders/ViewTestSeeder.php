@@ -16,17 +16,6 @@ class ViewTestSeeder extends Seeder
      */
     public function run()
     {
-        // 東京駅
-        // 山手線4番5番ホーム
-        DB::table('views')->insert([
-                'railroad_id' => '1',
-                'station_id' => '1',
-                'image1' => 'https://imgbucket-202211152400.s3.amazonaws.com/%E6%9D%B1%E4%BA%AC%E9%A7%85/%E5%B1%B1%E6%89%8B%E7%B7%9A4%E7%95%AA%E3%83%9B%E3%83%BC%E3%83%A0.png',
-                'image2' => 'https://imgbucket-202211152400.s3.amazonaws.com/%E6%9D%B1%E4%BA%AC%E9%A7%85/%E5%B1%B1%E6%89%8B%E7%B7%9A5%E7%95%AA%E3%83%9B%E3%83%BC%E3%83%A0.png',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-         
         // 京浜東北線3番6番ホーム
          DB::table('views')->insert([
                 'railroad_id' => '2',
@@ -60,17 +49,6 @@ class ViewTestSeeder extends Seeder
                 'railroad_id' => '6',
                 'station_id' => '115',
                 'image1' => 'https://imgbucket-202211152400.s3.amazonaws.com/%E6%9D%B1%E4%BA%AC%E9%A7%85/%E5%B8%B8%E7%A3%90%E7%B7%9A7_8%E7%95%AA%E7%B7%9A.png',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-         
-        // 神田駅
-        // 山手線2番3番ホーム
-         DB::table('views')->insert([
-                'railroad_id' => '1',
-                'station_id' => '29',
-                'image1' => 'https://imgbucket-202211152400.s3.amazonaws.com/%E7%A5%9E%E7%94%B0%E9%A7%85/%E5%B1%B1%E6%89%8B%E7%B7%9A2%E7%95%AA%E7%B7%9A.png',
-                'image2' => 'https://imgbucket-202211152400.s3.amazonaws.com/%E7%A5%9E%E7%94%B0%E9%A7%85/%E5%B1%B1%E6%89%8B%E7%B7%9A3%E7%95%AA%E7%B7%9A.png',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);

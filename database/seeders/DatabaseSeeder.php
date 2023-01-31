@@ -34,7 +34,10 @@ class DatabaseSeeder extends Seeder
         // 駅名(JR)追加
         $this->call(StationSeeder::class);
         
-        // 東京駅、神田駅画像追加
+        // サンプル画像追加
         $this->call(ViewTestSeeder::class);
+        
+        // 山手線全駅画像追加
+        $this->call(YamanoteSeeder::class);
     }
 }

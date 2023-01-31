@@ -28,157 +28,7 @@ class StationSeeder extends Seeder
          ]);
         DB::table('stations')->insert([
                 'railroad_id' => '1',
-                'station_name' => '有楽町',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '新橋',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '浜松町',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '田町',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '高輪ゲートウェイ',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '品川',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '大崎',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '五反田',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '目黒',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '恵比寿',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '渋谷',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '原宿',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '代々木',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '新宿',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '新大久保',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '高田馬場',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '目白',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '池袋',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '大塚',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '巣鴨',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '駒込',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '田端',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '西日暮里',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '鶯谷',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '上野',
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-         ]);
-        DB::table('stations')->insert([
-                'railroad_id' => '1',
-                'station_name' => '御徒町',
+                'station_name' => '神田',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);
@@ -190,7 +40,164 @@ class StationSeeder extends Seeder
          ]);
         DB::table('stations')->insert([
                 'railroad_id' => '1',
-                'station_name' => '神田',
+                'station_name' => '御徒町',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '上野',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '鶯谷',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '日暮里',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '西日暮里',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '田端',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '駒込',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '巣鴨',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '大塚',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '池袋',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '目白',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '高田馬場',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '新大久保',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '新宿',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '代々木',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '原宿',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '渋谷',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '恵比寿',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '目黒',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '五反田',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '大崎',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '品川',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '高輪ゲートウェイ',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '田町',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '浜松町',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '新橋',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+         
+        DB::table('stations')->insert([
+                'railroad_id' => '1',
+                'station_name' => '有楽町',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);
