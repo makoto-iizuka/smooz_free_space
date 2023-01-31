@@ -35,7 +35,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://86a5d79ffbdc411bbee1ddebb985b413.vfs.cloud9.us-east-1.amazonaws.com/auth/callback',
+        'redirect' => 'https://smooz-free-space.cf/auth/callback',
     ],
 
 ];
